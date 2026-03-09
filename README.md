@@ -1,6 +1,6 @@
 # Autonomous Oil Spill Cleanup Robot
 
-## Overview
+##Overview
 A fully autonomous trimaran-style robot designed to collect and filter oil spills from water surfaces using mechanical absorption and extraction. The robot autonomously navigates to target oil spills using GPS waypoint programming, collects oil using a rotating PTEG plastic cylinder mechanism with mechanical extraction, and returns to the starting point with collected oil stored in a 5-liter tank.
 
 **Status:** Fully functional prototype tested in controlled pool environment with real oil collection.
@@ -16,7 +16,7 @@ A fully autonomous trimaran-style robot designed to collect and filter oil spill
 - **Material:** 3D printed (ABS/PLA)
 
 ### Propulsion System
-- **Type:** Dual brushless underwater thrusters (BlueRobotics ESC-controlled)
+- **Type:** Dual brushless underwater thrusters (ESC-controlled)
 - **Quantity:** 2 thrusters (one per front hull)
 - **Control:** Independent ESC control for differential thrust (turning, forward/reverse)
 - **Navigation:** GPS waypoint programming for autonomous route execution
@@ -42,21 +42,21 @@ A fully autonomous trimaran-style robot designed to collect and filter oil spill
 
 ### Motor Control
 - **DC Motor Driver:** Controls 1,450 RPM DC motor (cylinder rotation)
-- **ESCs (Electronic Speed Controllers):** Control dual brushless thrusters via PWM signals
+- **ESCs (Electronic Speed ​​Controllers):** Control dual brushless thrusters via PWM signals
 
 ### Sensors & Perception
 1. **GPS Module:** Autonomous waypoint navigation and return-to-home functionality
-2. **LiDAR Sensor:** Obstacle detection (mounted high to detect ships/large objects); avoidance logic triggers directional changes
+2. **LiDAR Sensor:** Obstacle detection (mounted high to detect ships/large objects); Avoidance logic triggers directional changes
 3. **Float Sensor:** Tank level detection — alerts when 5-liter tank reaches capacity
 4. **ESP32-AI Camera Module:** Real-time monitoring of robot status and water conditions
 5. **Blynk App Integration:** Remote monitoring and manual override capability for troubleshooting
 
-### Communication
+###Communication
 - **Blynk Mobile App:** Custom programmed interface for:
-  - Real-time robot status monitoring
-  - Manual control override
-  - Emergency stop functionality
-  - Sensor data telemetry
+- Real-time robot status monitoring
+- Manual override control
+- Emergency stop functionality
+- Sensor data telemetry
 
 ---
 
@@ -65,23 +65,23 @@ A fully autonomous trimaran-style robot designed to collect and filter oil spill
 ### Development Timeline
 - **Duration:** 5 months from concept to functional prototype
 - **Testing Environment:** Custom-built pool with real oil (school regulations required controlled environment)
-- **Test Iterations:** Multiple cycles with progressive refinements
+- **Test Iterations:** Multiple cycles with progressive improvements
 
 ### Validated Capabilities
-✅ Autonomous GPS waypoint navigation  
-✅ Successful oil collection and mechanical extraction  
-✅ Tank fill detection and status reporting  
-✅ Obstacle avoidance via LiDAR  
-✅ Return-to-home functionality  
+✅ Autonomous GPS waypoint navigation
+✅ Successful oil collection and mechanical extraction
+✅ Tank fill detection and status reporting
+✅ Obstacle avoidance via LiDAR
+✅ Return-to-home functionality
 ✅ Remote monitoring via Blynk app
 
 ---
 
-## Known Limitations & Redesign Roadmap
+## Know Limitations & Redesign Roadmap
 
 ### Current Issues
-1. **Scissor Mechanism Efficiency:** Current design requires spring reinforcement (added after initial testing) to achieve adequate pressure on cylinders; not optimal
-2. **Extraction Precision:** 3D printing quality limitations affected scissor tolerance; redesign needed for consistent performance
+1. **Scissor Mechanism Efficiency:** Current design requires spring reinforcement (added after initial testing) to achieve adequate pressure on cylinders; notoptimal
+2. **Extraction Precision:** 3D printing quality limitations and different scissor tolerance; redesign needed for consistent performance
 3. **Hydrodynamic Drag:** Current hull shape creates unnecessary water resistance
 4. **Aesthetic Integration:** Electronics and wiring exposed; needs streamlined enclosure
 5. **Scalability:** Single-point failure in scissor mechanism; needs redundancy
@@ -100,21 +100,13 @@ A fully autonomous trimaran-style robot designed to collect and filter oil spill
 
 ### Power & Performance
 - **Primary Motor:** 1,450 RPM DC motor (cylinder drive)
-- **Thrusters:** Brushless underwater thrusters (exact thrust specs from BlueRobotics)
-- **Battery:** [To be specified]
-- **Runtime:** [To be specified]
+- **Thrusters:** Brushless underwater thrusters (exact thrust specs)
 
-### Dimensions & Weight
-- **Length:** ~80-100cm
-- **Width:** ~60cm (dual hull span)
-- **Tank Capacity:** 5 liters
-- **Weight:** [To be specified]
 
 ### Materials
 - **Hulls:** 3D printed plastic
 - **Absorbent Medium:** PTEG plastic cylinders
 - **Collection Tank:** [Material — plastic/aluminum]
-- **Frame:** [Material]
 
 ---
 
@@ -123,22 +115,22 @@ A fully autonomous trimaran-style robot designed to collect and filter oil spill
 ### Programming Language
 - **Primary:** Arduino IDE (ESP32-compatible)
 - **Libraries:** 
-  - GPS waypoint navigation
-  - Blynk IoT integration
-  - ESC PWM control
-  - Sensor data aggregation
+- GPS waypoint navigation 
+- Blynk IoT integration 
+-ESC PWM control 
+- Sensor data aggregation
 
 ### Key Algorithms
 - Waypoint-to-waypoint autonomous navigation
 - LiDAR-based obstacle avoidance (directional correction)
 - Tank level monitoring with threshold alerts
-- Failsafe return-to-home on battery low
+- Failsafe return-to-home on low battery
 
 ---
 
 ## Competition Context
-**Original Competition:** Environmental Protection Challenge  
-**Inspiration:** Large-scale water filtration systems  
+**Original Competition:** Environmental Protection Challenge
+**Inspiration:** Large-scale water filtration systems
 **Innovation:** Scaled-down autonomous deployment of passive mechanical filtration
 
 ---
@@ -152,12 +144,12 @@ A fully autonomous trimaran-style robot designed to collect and filter oil spill
 ---
 
 ## Author
-**Yaman** — Robotics Engineer & Designer  
-Khalifa Secondary School, Qatar  
-[GitHub: your-username]  
-[Contact: your-email]
+**Yaman** — Robotics Engineer & Designer
+Khalifa Secondary School, Qatar
+[GitHub: yaman325]
+[Contact: hightechnology2030@gmail.com]
 
 ---
 
-*Last Updated: [Date]*  
+*Last Updated: [9/3/2026]*
 *Repository Status: Active Development — v2.0 Redesign in Progress*
