@@ -1,45 +1,84 @@
 # Autonomous Oil Spill Cleanup Boat
 
 ## Overview
-A fully autonomous trimaran-style robot designed to collect and filter oil spills from water surfaces. The boat uses GPS navigation to autonomously reach target areas, collect oil using a rotating absorbent cylinder mechanism, and return to the starting point.
+A fully autonomous trimaran robot designed to collect and filter oil spills from water surfaces. Developed over 5 months, the boat uses GPS-guided navigation to autonomously reach contaminated areas, mechanically collect oil using absorbent cylinder technology, and return to base station.
 
-## Design Features
+## Design Specifications
 
 ### Hull Configuration
-- **Dual collector hulls (red):** Front-mounted, house motors, ESP32 microcontroller, and the collection mechanism
-- **Storage hull (blue):** Rear-mounted, houses the replaceable oil collection tank
-- **Size:** ~80-100cm total length
+- **Dual collector hulls (front):** House propulsion thrusters, DC motor control system, and oil collection mechanism
+- **Storage hull (rear):** Contains 5-liter replaceable oil collection tank
+- **Overall dimensions:** ~80-100cm length
+- **Material:** 3D printed with hydrodynamic optimization for reduced water resistance
+
+### Propulsion System
+- **2x Brushless underwater thrusters:** PSQ Company model
+- **Electronic Speed Controllers (ESCs):** Control thrust magnitude and direction
+- **Motor control:** Synchronized dual-thruster system for forward, reverse, and turning maneuvers
 
 ### Oil Collection Mechanism
-- **Absorbent cylinders:** Oil-absorbent plastic rollers that spin to collect oil from water surface
-- **Mechanical extraction:** Fixed scissors/fork mechanism squeezes oil from cylinders as they rotate
-- **Collection chute:** Oil flows down into the rear tank via gravity
-- **Tank design:** Easily replaceable tanks for quick turnaround in field deployment
+- **Absorbent cylinders:** PTEG plastic-based, rotating cylinders that attract and absorb oil from water surface
+- **DC Motor:** 1,450 RPM dedicated motor for cylinder rotation
+- **Mechanical extraction:** Spring-loaded scissor mechanism squeezes absorbed oil from cylinders into collection chute
+- **Oil flow:** Direct gravity-feed into rear tank; float sensor indicates tank fullness
 
 ### Electronics & Navigation
-- **Microcontroller:** ESP32
-- **Navigation:** GPS-guided autonomous waypoint navigation
-- **Motors:** Dual brushless motors for propulsion and collection mechanism
+- **Microcontroller:** ESP32 with programmed autonomous mission planning
+- **Navigation:** GPS-guided waypoint system; boat returns to start point autonomously
+- **Obstacle avoidance:** LiDAR sensor (above water) detects large obstacles (ships, structures)
+- **Monitoring:** ESP32 AI camera for real-time robot status assessment
+- **Mobile control:** Blynk app interface for emergency manual override and diagnostics
+
+### Sensors
+- **Float sensor:** Tank full/empty detection
+- **LiDAR:** Obstacle detection (above-water only)
+- **GPS:** Autonomous navigation and return
+- **AI camera:** Live monitoring and situational awareness
+
+## Development & Testing
+
+### Project Timeline
+- **Duration:** 5 months (design to first successful test)
+- **Testing environment:** Custom-built test pool with real oil simulation
+- **Success rate:** Oil collection mechanism functional from first deployment
+
+### Testing Results
+- Successfully collected simulated oil multiple times
+- GPS autonomous navigation: Fully operational
+- Obstacle avoidance: Functional for surface-level hazards
+- Tank capacity: Tested and verified at 5 liters
 
 ## Current Status
-**Fully functional prototype** — tested in field conditions with successful oil collection and autonomous return.
+**Fully functional prototype** — Ready for field deployment with planned improvements.
 
-## Known Issues & Redesign Plan
-- **Wire management:** Loose connections during transport — need better soldering/crimping and cable routing
-- **Structural durability:** Need reinforced connection points between hulls
-- **Aesthetic improvement:** Redesigning overall hull shape for professional appearance and better hydrodynamics
-- **Cable routing:** Adding internal channels to protect and organize wiring
+## Known Limitations & Upgrade Plan
 
-## Next Steps
-- Redesign in OnShape with improved structural integrity
-- Implement cable management solutions
-- Strengthen inter-hull connections
-- Field testing with new design
+### Current Limitations
+1. **Oil detection AI:** No automated visual identification of oil vs. water; manual targeting required
+2. **Scissor mechanism efficiency:** Spring-loaded design works but suboptimal; loses some collected oil during extraction
+3. **Hydrodynamics:** Current design has higher water resistance than optimal; affects speed and efficiency
+4. **Build quality:** 3D printing resolution affects precision of scissor mechanism
+5. **Structural integration:** Individual components assembled rather than unified design; creates weak points and wire exposure
 
+### Planned Improvements (Redesign Phase)
+- **AI vision upgrade:** Train ESP32 camera to detect oil-water contrast automatically
+- **Optimized scissor mechanism:** Redesign with better geometry and higher-grade 3D printing
+- **Hydrodynamic hull redesign:** Streamlined, integrated hull structure to reduce drag and increase speed
+- **Internal cable routing:** Built-in wire channels to eliminate exposed connections and improve durability
+- **Unified structure:** Single-piece hull design to improve structural integrity and aesthetics
+- **Advanced materials:** Consider hybrid 3D printing materials for strength and durability
 
-## Author
-Yaman — Robotics Engineer, Qatar
+## Files & Documentation
+- `/photos` — Design photos, testing documentation, field trials
+- `/code` — ESP32 firmware (Arduino-based), mission planning code, Blynk app configuration
+- `/design` — OnShape CAD files (redesign in progress)
+- `/specifications` — Detailed sensor and component specifications
+
+## Author & Development
+**Yaman** — Robotics Engineer, Qatar
+- Solo redesign and optimization (2026)
+- Original concept and team development (2025)
 
 ---
 
-*Last updated: [3/9/2026]*
+*Project status: Prototype complete, full redesign in progress*
